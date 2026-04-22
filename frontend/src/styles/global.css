@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap');
+@import 'leaflet/dist/leaflet.css';
+
+:root {
+  /* Core UI Tokens - Light (VS Code Styled) */
+  --bg-page: #ffffff;
+  --bg-sidebar: #f3f3f3;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+  
+  --text-primary: #333333;
+  --text-secondary: #616161;
+  --text-inverse: #ffffff;
+  --text-muted: #969696;
+
+  --border-color: #cecece;
+  
+  --green: #1a7a4a;
+  --green-hover: #15613b;
+  --green-light: #e8f5ee;
+
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  --radius: 14px;
+  --radius-lg: 20px;
+  --nav-h: 64px;
+}
+
+[data-theme="dark"] {
+  /* Core UI Tokens - Dark (VS Code Dark+ Style) */
+  --bg-page: #1e1e1e;
+  --bg-sidebar: #252526;
+  --bg-card: #2d2d30;
+  --bg-input: #3c3c3c;
+
+  --text-primary: #cccccc;
+  --text-secondary: #969696;
+  --text-inverse: #ffffff;
+  --text-muted: #6e6e6e;
+
+  --border-color: #454545;
+
+  --green: #2ea862;
+  --green-hover: #37c072;
+  --green-light: #203a2b;
+
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+button {
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+
+input, textarea {
+  font-family: 'DM Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Leaflet overrides */
+.leaflet-container {
+  font-family: 'DM Sans', sans-serif;
+  border-radius: 0;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  padding: 0;
+  overflow: hidden;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  padding: 16px 18px;
+  min-width: 220px;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 10px; }

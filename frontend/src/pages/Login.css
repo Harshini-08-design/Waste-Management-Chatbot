@@ -1,0 +1,211 @@
+.login-page {
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-page);
+  padding-bottom: 40px;
+}
+
+.auth-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: var(--shadow);
+  margin: 80px 20px 20px;
+}
+
+.auth-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px;
+  color: var(--green);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.auth-sub {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+
+.alert-success {
+  background: var(--green-light);
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--green);
+  margin-bottom: 16px;
+}
+
+.auth-tabs {
+  display: flex;
+  background: var(--bg-sidebar);
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: none;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.auth-tab.active {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-weight: 500;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 15px;
+  color: var(--text-primary);
+  background: var(--bg-input);
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form-group input:focus {
+  border-color: var(--green);
+}
+
+.form-hint {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 5px;
+}
+
+.forgot-link {
+  text-align: right;
+  margin-bottom: 4px;
+  margin-top: -8px;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: var(--green);
+  padding: 0;
+}
+
+.link-btn:hover { text-decoration: underline; }
+
+.btn-full {
+  width: 100%;
+  padding: 14px;
+  background: var(--green);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+.btn-full:hover { background: var(--green-hover); }
+
+.social-divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.social-divider::before,
+.social-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 38%;
+  height: 1px;
+  background: var(--border);
+}
+
+.social-divider::before { left: 0; }
+.social-divider::after  { right: 0; }
+
+.social-divider span {
+  font-size: 12px;
+  color: var(--muted);
+  background: var(--white);
+  padding: 0 12px;
+}
+
+.social-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.social-btn {
+  flex: 1;
+  padding: 11px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  background: var(--white);
+  font-size: 14px;
+  color: var(--dark);
+  transition: all 0.2s;
+}
+
+.social-btn:hover {
+  border-color: var(--green);
+  background: var(--green-l);
+}
+
+/* Styling for the "Back to Sign In" button to make it look distinct from the primary button */
+.link-btn-secondary {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  width: 100%;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+
+.link-btn-secondary:hover {
+  background: var(--sand);
+  color: var(--dark);
+}
+
+/* Optional: Add a small animation for when the OTP fields appear */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group.otp-animation {
+  animation: fadeIn 0.3s ease-in-out;
+}

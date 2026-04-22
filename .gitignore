@@ -1,0 +1,16 @@
+node_modules/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# AI Models (They are usually too big for GitHub)
+models/*.onnx
+models/*.pt
+
+# Database
+vector_db/
+uploads/
+*.db
